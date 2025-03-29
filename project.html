@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="headers">
+            <div class="box">
+                <h1>Natch</h1>
+            </div>
+            <div class="box">
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="classmate.html">Classmates</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                    </ul>
+                    <div class="header-box-for-menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+
+    </div>
+    </header>
+    <div class="maincontainer">
+        <div class="container">
+            <h1>🛠 Project 1</h1>
+            <p><strong>Title:</strong> title 1</p>
+            <p><strong>Description:</strong>blah blah</p>
+            <a href="#" class="project-link">View Details</a>
+        </div>
+    
+        <div class="container">
+            <h1>💡 Project 2</h1>
+            <p><strong>Title:</strong>title 2</p>
+            <p><strong>Description:</strong>blah blah</p>
+            <a href="#" class="project-link">View Details</a>
+        </div>
+    
+        <div class="container">
+            <h1>🚀 Project 3</h1>
+            <p><strong>Title:</strong> title 3</p>
+            <p><strong>Description:</strong> blah blah</p>
+            <a href="#" class="project-link">View Details</a>
+        </div>
+    </div>
+    <div class="maincontainer">
+        <div class="container">
+            <h1>🛠 Project 4</h1>
+            <p><strong>Title:</strong> title 1</p>
+            <p><strong>Description:</strong>blah blah</p>
+            <a href="#" class="project-link">View Details</a>
+        </div>
+    
+        <div class="container">
+            <h1>💡 Project 5</h1>
+            <p><strong>Title:</strong>title 2</p>
+            <p><strong>Description:</strong>blah blah</p>
+            <a href="#" class="project-link">View Details</a>
+        </div>
+    
+        <div class="container">
+            <h1>🚀 Project 6</h1>
+            <p><strong>Title:</strong> title 3</p>
+            <p><strong>Description:</strong> blah blah</p>
+            <a href="#" class="project-link">View Details</a>
+        </div>
+    </div>
+    </section><br><br><br><br><br>
+    
+    
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+
+<style>
+.maincontainer {
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.container {
+    background-color: #a3daff;
+    padding: 20px;
+    border: 5px solid #0088cc;
+    width: 30%;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1f2937;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4b5563;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}
+</style>
+</html>

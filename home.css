@@ -11,6 +11,10 @@ body {
     margin: 0;
     padding: 0;
 }
+.headers{
+    display: flex;
+    justify-content: space-between;
+}
 
 header {
     background: #00aaff;
@@ -34,16 +38,23 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    font-size: 20px;
 }
 
 nav ul li a:hover {
     color: #0077cc;
+    text-decoration: underline;
+
+    
 }
 
 .header-box-for-menu {
     display: none;
     font-size: 24px;
     cursor: pointer;
+}
+.hidden {
+    display: none;
 }
 
 /* Home Section */
@@ -126,12 +137,15 @@ section {
 /* Classmates Grid */
 .classmates-grid ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
     gap: 15px;
     list-style: none;
     padding: 0;
 }
-
+img{
+    width: 100%;
+    height: 100%;
+}
 .classmates-grid ul li {
     background: #00aaff;
     padding: 10px;
@@ -162,8 +176,23 @@ footer {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1100px;
     border-radius: 10px;
+}
+
+.abouthead{
+    display: flex;
+}
+
+.aboutbox1{
+    height: 450px;
+   
+
+}
+
+.aboutbox1 img{
+    border-radius: 20px;
+
 }
 
 #about h2 {
@@ -196,59 +225,26 @@ footer {
 }
 
 /* Projects Section */
-#projects {
-    background-color: #a3daff;
-    padding: 50px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 900px;
-    border-radius: 10px;
-}
-
-#projects h2 {
-    font-size: 32px;
-    color: #003f5c;
-    margin-bottom: 20px;
-}
-
-.projects-grid {
+.classmates-grid2 ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 15px;
     list-style: none;
+    padding: 0;
 }
 
-.projects-grid li {
+.classmates-grid2 ul li {
     background: #00aaff;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     transition: 0.3s;
     box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
     color: white;
-    font-weight: bold;
 }
 
-.projects-grid li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: #0077cc;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.projects-grid li a:hover {
-    background: #004080;
-}
-
-.projects-grid li:hover {
+.classmates-grid2 ul li:hover {
     background: #0088cc;
-    transform: scale(1.05);
+    cursor: pointer;
 }
 
 /* Contact Section */
@@ -259,7 +255,7 @@ footer {
     text-align: center;
     border-radius: 10px;
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 800px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -282,36 +278,6 @@ footer {
 }
 
 /* Contact Form */
-.contact-form {
-    margin-top: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form button {
-    background: #0077cc;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    background: #004080;
-    transform: scale(1.05);
-}
 
 
 /* Responsive Design */
@@ -336,6 +302,52 @@ footer {
     .mobile-nav {
         display: flex;
     }
+    .header-box-for-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+    .classmates-grid ul {
+        grid-template-columns: 1fr;
+    }
+    .classmates-grid2 ul {
+        grid-template-columns: 1fr;
+    }
+    .map-container {
+        padding-bottom: 75%; /* Aspect ratio 4:3 for better fit on mobile */
+    }
 }
+
+@media (max-width: 1024px) {
+    .classmates-grid ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+/* Make the map responsive on mobile devices */
+.responsive-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 
 
